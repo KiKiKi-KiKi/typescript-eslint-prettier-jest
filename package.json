@@ -1,0 +1,19 @@
+{
+  "name": "typescript-eslint-prettier-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiKiKi-KiKi/typescript-eslint-prettier-jest.git"
+  },
+  "author": "KiKiKi KiKi <https://twitter.com/KiKiKi_KiKi> (https://github.com/kikiki-kiki)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiKiKi-KiKi/typescript-eslint-prettier-jest/issues"
+  },
+  "homepage": "https://github.com/KiKiKi-KiKi/typescript-eslint-prettier-jest#readme"
+}
