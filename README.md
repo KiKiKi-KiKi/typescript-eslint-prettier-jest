@@ -147,3 +147,21 @@ $ touch .prettierrc.json
 +   'prettier',
   ],
 ```
+
+## Jest
+
+```sh
+$ npm i --save-dev jest ts-jest @types/jest
+```
+
+### setting
+
+```sh
+$ npx jest --init
+✔ Would you like to use Jest when running "test" script in "package.json"? … yes
+✔ Would you like to use Typescript for the configuration file? … no
+✔ Choose the test environment that will be used for testing › node
+✔ Do you want Jest to add coverage reports? … no
+✔ Which provider should be used to instrument code for coverage? › v8
+✔ Automatically clear mock calls and instances between every test? … no
+```
