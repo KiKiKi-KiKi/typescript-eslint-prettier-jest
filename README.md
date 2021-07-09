@@ -165,3 +165,29 @@ $ npx jest --init
 ✔ Which provider should be used to instrument code for coverage? › v8
 ✔ Automatically clear mock calls and instances between every test? … no
 ```
+
+`jest.config.js`
+
+```js
+module.exports = {
+  clearMocks: true,
+  coverageProvider: 'v8',
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
+  roots: ['<rootDir>/tests/'],
+};
+```
+
+### TypeScript + Jest
+
+Add tests root dir to `tsconfig.json`
+
+`tsconfig.json`
+
+```diff
+- "include": ["src/**/*"],
++ "include": ["src/**/*", "tests/**/*"],
+  "exclude": ["node_modules"]
+}
+```
