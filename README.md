@@ -8,25 +8,30 @@ npx tsc --init
 ```
 
 `tsconfig.json`
+
 ```json
 {
   "compilerOptions": {
-    "target": "es5", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */
-    "module": "commonjs", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
-    "lib": ["dom", "dom.iterable", "ES2017"], /* Specify library files to be included in the compilation. */
+    "target": "es5" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */,
+    "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "ES2017"
+    ] /* Specify library files to be included in the compilation. */,
     "declaration": true /* Generates corresponding '.d.ts' file. */,
-    "sourceMap": true, /* Generates corresponding '.map' file. */
-    "outDir": "./dist", /* Redirect output structure to the directory. */
-    "downlevelIteration": true, /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
-    "strict": true, /* Enable all strict type-checking options. */
-    "noImplicitThis": true, /* Raise error on 'this' expressions with an implied 'any' type. */
-    "noUnusedLocals": true, /* Report errors on unused locals. */
-    "noUnusedParameters": true, /* Report errors on unused parameters. */
-    "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
-    "esModuleInterop": true, /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
-    "experimentalDecorators": true, /* Enables experimental support for ES7 decorators. */
-    "emitDecoratorMetadata": true, /* Enables experimental support for emitting type metadata for decorators. */
-    "skipLibCheck": true, /* Skip type checking of declaration files. */
+    "sourceMap": true /* Generates corresponding '.map' file. */,
+    "outDir": "./dist" /* Redirect output structure to the directory. */,
+    "downlevelIteration": true /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitThis": true /* Raise error on 'this' expressions with an implied 'any' type. */,
+    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noUnusedParameters": true /* Report errors on unused parameters. */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
+    "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+    "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
+    "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
   "include": ["src/**/*"],
@@ -55,15 +60,16 @@ $ npx eslint --init
 ✔ Browser
 ? How would you like to define a style for your project?
 ❯ Use a popular style guide
-? Which style guide do you want to follow? … 
+? Which style guide do you want to follow? …
 ❯ Airbnb: https://github.com/airbnb/javascript
-? What format do you want your config file to be in? … 
+? What format do you want your config file to be in? …
 ❯ JavaScript
 ```
 
 ### ESLint with TypeScript
 
 `.eslintrc.js`
+
 ```js
 module.exports = {
   env: {
@@ -107,7 +113,6 @@ module.exports = {
     'no-var': 'error',
   },
 };
-
 ```
 
 ### Ignore `.eslintrc.js` from ESLint project target
@@ -133,6 +138,7 @@ $ touch .prettierrc.json
 ### ESLint with Prettier
 
 `.eslintrc.js`
+
 ```diff
   extends: [
     'airbnb-base',
@@ -141,4 +147,3 @@ $ touch .prettierrc.json
 +   'prettier',
   ],
 ```
-
