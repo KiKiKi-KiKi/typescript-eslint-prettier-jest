@@ -1,0 +1,12 @@
+{
+  "editor.tabSize": 2,
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  }
+}
