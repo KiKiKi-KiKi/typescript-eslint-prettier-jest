@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/KiKiKi-KiKi/typescript-eslint-prettier-jest#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
     "typescript": "^4.3.5"
   }
 }
