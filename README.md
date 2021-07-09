@@ -117,3 +117,15 @@ FIX VSCode Error of `Parsing error: "parserOptions.project" has been set for @ty
 ```sh
 $ echo '/.eslintrc.js' >> .eslintignore
 ```
+
+## Prettier
+
+```sh
+$ npm i --save-dev prettier eslint-config-prettier
+```
+
+### setting file
+
+```sh
+$ touch .prettierrc.json
+```
