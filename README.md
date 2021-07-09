@@ -129,3 +129,16 @@ $ npm i --save-dev prettier eslint-config-prettier
 ```sh
 $ touch .prettierrc.json
 ```
+
+### ESLint with Prettier
+
+`.eslintrc.js`
+```diff
+  extends: [
+    'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
++   'prettier',
+  ],
+```
+
