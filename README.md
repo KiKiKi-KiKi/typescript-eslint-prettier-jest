@@ -60,3 +60,60 @@ $ npx eslint --init
 ? What format do you want your config file to be in? … 
 ❯ JavaScript
 ```
+
+### ESLint with TypeScript
+
+`.eslintrc.js`
+```js
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
+  plugins: ['@typescript-eslint'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    // cf. https://github.com/typescript-eslint/typescript-eslint/releases/tag/v2.0.0
+    project: './tsconfig.json',
+    sourceType: 'module',
+  },
+  settings: {
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
+  rules: {
+    // Allow import without extensions
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' },
+    ],
+    // Allow named export
+    'import/prefer-default-export': 'off',
+    'newline-before-return': 'error',
+    'no-console': 'warn',
+    'no-var': 'error',
+  },
+};
+
+```
+
+### Ignore `.eslintrc.js` from ESLint project target
+
+FIX VSCode Error of `Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser. The file does not match your project config: .eslintrc.js. The file must be included in at least one of the projects provided.`
+
+```sh
+$ echo '/.eslintrc.js' >> .eslintignore
+```
