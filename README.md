@@ -191,3 +191,45 @@ Add tests root dir to `tsconfig.json`
   "exclude": ["node_modules"]
 }
 ```
+
+## Build
+
+```sh
+$ npx tsc --project .
+```
+
+### Exclude test files in build.
+
+Use build setting file.
+
+```sh
+$ touch tsconfig.build.json
+```
+
+`tsconfig.build.json`
+
+```json
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["tests/**/*", "**/?(*.)+(spec|test).[tj]s?(x)"]
+}
+```
+
+Build without test files.
+
+```sh
+$ npx tsc --project tsconfig.build.json
+```
+
+### Add Build npm script
+
+`package.json`
+
+```diff
+  "scripts": {
++   "build:cjs": "tsc --project tsconfig.build.json --module commonjs --outDir ./dist-cjs",
++   "build:esm": "tsc --project tsconfig.build.json --module esNext --outDir ./dist-esm",
++   "build": "npm run build:cjs && npm run build:esm",
+    "test": "jest --runInBand",
+  }
+```
