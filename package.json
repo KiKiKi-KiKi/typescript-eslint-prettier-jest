@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/KiKiKi-KiKi/typescript-eslint-prettier-jest/issues"
   },
-  "homepage": "https://github.com/KiKiKi-KiKi/typescript-eslint-prettier-jest#readme"
+  "homepage": "https://github.com/KiKiKi-KiKi/typescript-eslint-prettier-jest#readme",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
 }
